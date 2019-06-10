@@ -191,7 +191,7 @@ const UserProfileSchema = new GraphQLSchema({
           await User.findOne({
             username: args.username
           });
-          await createKeycloakUser(user);
+          //await createKeycloakUser(user);
 
           return await user.save();
         }
@@ -207,7 +207,7 @@ const UserProfileSchema = new GraphQLSchema({
         resolve: async (root, args, context, info) => {
 
           let user = new User(args);
-          await deleteKeycloakUser(user);
+          //await deleteKeycloakUser(user);
 
           return User.findOneAndDelete({
             username: user.username
@@ -231,7 +231,7 @@ const UserProfileSchema = new GraphQLSchema({
         },
         resolve: async (root, args, context, info) => {
 
-          await updateKeycloakUser(args.username, args.firstname, args.lastname)
+         //await updateKeycloakUser(args.username, args.firstname, args.lastname)
 
           let query = {
             username: args.username
@@ -256,7 +256,7 @@ const UserProfileSchema = new GraphQLSchema({
         },
         resolve: async (root, args, context, info) => {
 
-          await updateKeycloakUserPassword(args.username, args.password)
+          //await updateKeycloakUserPassword(args.username, args.password)
 
           let query = {
             username: args.username
