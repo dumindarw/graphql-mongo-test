@@ -35,7 +35,7 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "supertest": "^4.0.2",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
